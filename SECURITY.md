@@ -1,21 +1,26 @@
 # Security Policy
 
-## Supported Versions
+## Scope
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+This repository contains a Next.js application using Supabase Auth and server-side session handling.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+Security fixes should be applied to the `main` branch and deployed through the normal CI/CD pipeline.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Please report suspected security vulnerabilities privately to the repository owner rather than opening a public issue. Include:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+- A short description of the issue
+- The affected file or route, if known
+- Steps to reproduce without exposing real credentials or personal data
+- The potential impact
+
+Do not include passwords, API keys, session cookies, access tokens, or other secrets in reports, commits, issues, or pull requests.
+
+## Security Expectations
+
+- Keep Supabase publishable keys in `NEXT_PUBLIC_*` variables; never commit service-role keys.
+- Protect database data with Supabase Row Level Security (RLS) policies.
+- Treat browser input, redirect parameters, and authentication state as untrusted.
+- Keep authentication/session logic server-aware and request-scoped.
+- Keep dependencies and the Next.js runtime up to date.
