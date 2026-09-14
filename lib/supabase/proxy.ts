@@ -11,8 +11,8 @@ export async function updateSession(request: NextRequest) {
 
   // Always create a request-scoped client; never share auth state between requests.
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
+    process.env.NEXT_PUBLIC_SUPABASE_URL?.startsWith("http") ? process.env.NEXT_PUBLIC_SUPABASE_URL : "https://example.supabase.co",
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY?.trim() || "dummy",
     {
       cookies: {
         getAll() {
