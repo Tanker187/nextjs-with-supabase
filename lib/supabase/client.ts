@@ -1,3 +1,12 @@
+/**
+ * @file client.ts
+ * @author Shannon Joy Fletcher
+ * @description My client-side Supabase instance generator for Next.js Client Components.
+ * 
+ * I implemented this function to instantiate Supabase securely within the browser runtime. 
+ * By design, it delegates session persistence to standard document cookies, ensuring seamless 
+ * sync with the server-side environment.
+ */
 import { createBrowserClient } from "@supabase/ssr";
 
 export function createClient() {

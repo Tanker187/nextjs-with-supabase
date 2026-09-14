@@ -1,3 +1,12 @@
+/**
+ * @file middleware.ts
+ * @author Shannon Joy Fletcher
+ * @description My Next.js Edge Middleware for intercepting requests and managing Supabase sessions.
+ * 
+ * I designed this middleware to actively process all incoming routes, intercepting requests to 
+ * refresh expired Supabase JWTs before they hit the internal application logic, ensuring 
+ * continuous authentication state integrity.
+ */
 import { updateSession } from "@/lib/supabase/proxy";
 import { type NextRequest } from "next/server";
 

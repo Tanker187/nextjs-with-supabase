@@ -1,3 +1,12 @@
+/**
+ * @file page.tsx
+ * @author Shannon Joy Fletcher
+ * @description My primary landing page view for the application.
+ * 
+ * I architected this root component to present the core unauthenticated experience, 
+ * integrating the hero section, tutorial components, and dynamic environment variable 
+ * state checks to seamlessly guide users into the system.
+ */
 import { DeployButton } from "@/components/deploy-button";
 import { EnvVarWarning } from "@/components/env-var-warning";
 import { AuthButton } from "@/components/auth-button";

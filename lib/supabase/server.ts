@@ -1,3 +1,12 @@
+/**
+ * @file server.ts
+ * @author Shannon Joy Fletcher
+ * @description My server-side Supabase client factory for Next.js App Router.
+ * 
+ * I architected this module to securely initialize Supabase clients within Server Components, 
+ * Route Handlers, and Server Actions. It dynamically resolves cookies on the server side 
+ * to ensure robust session continuity and strict protection of backend tokens.
+ */
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 

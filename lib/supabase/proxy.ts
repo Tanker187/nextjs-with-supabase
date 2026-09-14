@@ -1,3 +1,11 @@
+/**
+ * @file proxy.ts
+ * @author Shannon Joy Fletcher
+ * @description My Supabase proxy/middleware engine for secure session refreshing.
+ * 
+ * I implemented this to actively inspect HTTP requests for Supabase tokens, refreshing them 
+ * dynamically via `@supabase/ssr` server utilities before routing the request down the stack.
+ */
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { hasEnvVars } from "../utils";
